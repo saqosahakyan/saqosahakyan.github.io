@@ -1,0 +1,77 @@
+
+body{
+  background-image: url(../index/image/35402.webp);
+}
+
+.menu {
+    color: blue;
+}
+
+
+
+
+.inputField::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgba(0, 0, 0, 1);
+    opacity: 1; 
+   
+  }
+  
+  .inputField:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba(0, 0, 0, 1);
+    
+  }
+  
+  .inputField::-ms-input-placeholder { /* Microsoft Edge */
+    color: rgba(0, 0, 0, 1);
+    
+  }
+
+.inputField {
+    margin: 20px 10px 0 0;
+    cursor: auto;
+    font-size: small;
+    
+    border: none;
+}
+
+
+#btnLogin {
+  background-color: rgb(6, 61, 43);
+}
+
+
+
+
+.nkar {
+  width: 500px;
+  height: 500px;
+  background-image: url(../index/image/35405.webp);
+  background-repeat: no-repeat;
+  background-size:contain;
+  transition: 1s;
+}
+
+.nkar:hover {
+  opacity: 0.5;
+ 
+}
+
+/*
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0;
+}
+::placeholder { 
+  color: red !important;
+  opacity: 1; 
+}
+
+:-ms-input-placeholder { 
+  color: red !important;
+}
+
+::-ms-input-placeholder { 
+  color: red !important;
+}
+*/
