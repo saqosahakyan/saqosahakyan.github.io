@@ -6,37 +6,136 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmsPage</title>
-    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" 
     integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     
   </head>
 
   <body>
    
-    
-    
-    <nav class="txt11 navbar navbar-dark bg-dark" style="height: 70px; "> 
+    <div class="mobileMenu">
+     
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="leftMenu" aria-labelledby="offcanvasExampleLabel" style="background-image:url(../index/image/black15.jpeg); background-size: contain;">
+        <div class="btn-group d-block">
+          <button type="button" class="btn btn-outline-light" style="border: none; font-size: 22px;">Գլխավոր</button>
+        </div>
 
-      <button class="btn btn-outline-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftMenu" aria-controls="leftMenu" style="border: none; margin-top: 3px;">
+
+        <button type="button" class="btn-close text-reset backButton btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close" style="font-size: 22px;"></button>
+
+  
+        <!--filmer-->
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle"  style="border:none; font-size: 22px;" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Ֆիլմեր
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark" >
+            <li><a class="dropdown-item" href="#" onclick="window.location.href = 'https://films.bz/films/dramaner/'">Դրամա</a></li>
+            <li><a class="dropdown-item" href="#">Կոմեդիա</a></li>
+            <li><a class="dropdown-item" href="#">Ֆանտաստիկա</a></li>
+            <li><a class="dropdown-item" href="#">Սարսափ</a></li>
+            <li><a class="dropdown-item" href="#">Դետեկտիվ</a></li>
+            <li><a class="dropdown-item" href="#">Թրիլլեր</a></li>
+          </ul>
+        </div>  
+  
+              <!-- serialner-->
+        <div class="dropdown1">
+          <button class="btn btn-outline-light dropdown-toggle"  style="border:none; font-size: 22px;" type="button" id="dropSerial" data-bs-toggle="dropdown" aria-expanded="false">
+            Սերիալներ
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Դրամա</a></li>
+            <li><a class="dropdown-item" href="#">Կոմեդիա</a></li>
+            <li><a class="dropdown-item" href="#">Ֆանտաստիկա</a></li>
+            <li><a class="dropdown-item" href="#">Սարսափ</a></li>
+            <li><a class="dropdown-item" href="#">Դետեկտիվ</a></li>
+            <li><a class="dropdown-item" href="#">Թրիլլեր</a></li>
+          </ul>
+        </div>
+   
+              <!-- mult -->
+        <div class="dropdown">
+          <button class="btn btn-outline-light dropdown-toggle"  style="border:none; font-size: 22px;" type="button" id="dropMult"  data-bs-toggle="dropdown" aria-expanded="false">
+            Մուլտֆիլմեր
+          </button>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">Դրամա</a></li>
+            <li><a class="dropdown-item" href="#">Կոմեդիա</a></li>
+            <li><a class="dropdown-item" href="#">Ֆանտաստիկա</a></li>
+            <li><a class="dropdown-item" href="#">Սարսափ</a></li>
+            <li><a class="dropdown-item" href="#">Դետեկտիվ</a></li>
+            <li><a class="dropdown-item" href="#">Թրիլլեր</a></li>
+          </ul>
+        </div>
+      
+        <div class="helpMenu"> 
+    
+          <button type="button" class="btn btn-outline-light d-md-none d-block" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="white" class="bi bi-globe2" viewBox="0 0 16 16">
+              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
+            </svg>
+          </button>
+              
+          <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-right"  style="border: none;">
+            <li><a class="dropdown-item " href="#">Русский</a></li>
+          </ul>
+           
+          <button type="button" class="btn btn-outline-light d-xxl-none d-block" style="border: none;" >
+            <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-badge-4k" viewBox="0 0 16 16">
+              <path d="M4.807 5.001C4.021 6.298 3.203 7.6 2.5 8.917v.971h2.905V11h1.112V9.888h.733V8.93h-.733V5.001h-1.71zm-1.23 3.93v-.032a46.781 46.781 0 0 1 1.766-3.001h.062V8.93H3.577zm9.831-3.93h-1.306L9.835 7.687h-.057V5H8.59v6h1.187V9.075l.615-.699L12.072 11H13.5l-2.232-3.415 2.14-2.584z"/>
+              <path d="M14 3a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h12zM2 2a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H2z"/>
+            </svg>
+          </button>
+
+             <!--support-->
+          <button class="btn btn-outline-light d-xxl-none d-block" type="button" style="border: none;">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+                <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+              </svg>
+          </button>
+
+          <button class="btn btn-outline-light d-xxl-none d-block" type="button" style="border: none;"> 
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+                  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.062a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+                </svg>
+          </button>
+
+          <button class="btn btn-outline-light d-xxl-none d-block" type="button" style="border: none;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+              <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+            </svg>
+          </button>
+         
+
+      </div>
+
+    </div>
+  
+
+
+<!--nav panel-->
+    <nav class="txt11 navbar navbar-dark bg-dark desktopMenu" style="height: 70px; display: flex;"> 
+
+      <button class="btn btn-outline-light d-xxl-none d-block" type="button" data-bs-toggle="offcanvas" data-bs-target="#leftMenu" aria-controls="leftMenu" style="border: none;">
         <span class="navbar-toggler-icon" style="margin-right: 10px;"></span>Ընտրել
       </button>
-      
-      <div class="offcanvas offcanvas-start" tabindex="-1" id="leftMenu" aria-labelledby="offcanvasExampleLabel">  </div>
 
       
-      <div class="btn-group" style="margin: 3px;" >
+
+      <div class="btn-group d-xxl-block d-none" >
         <button type="button" class="btn btn-outline-light" style="border: none;">Գլխավոր</button>
       </div>
 
 
       <!--filmer-->
-      <div class="dropdown">
-        <button class="btn btn-outline-light dropdown-toggle"  style="border:none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown d-xxl-block d-none dropDownHover">
+        <button class="btn btn-outline-light dropdown-toggle dropdown-toggle-Hover"  style="border:none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Ֆիլմեր
         </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
-          <li><a class="dropdown-item" href="#" onclick="window.location.href = 'https://films.bz/films/dramaner/'">Դրամա</a></li>
+        <ul class="dropdown-menu dropdown-menu-Hover dropdown-menu-dark">
+          <li><a class="dropdown-item" href="#">Դրամա</a></li>
           <li><a class="dropdown-item" href="#">Կոմեդիա</a></li>
           <li><a class="dropdown-item" href="#">Ֆանտաստիկա</a></li>
           <li><a class="dropdown-item" href="#">Սարսափ</a></li>
@@ -48,11 +147,11 @@
 
 
             <!-- serialner-->
-      <div class="dropdown">
-        <button class="btn btn-outline-light dropdown-toggle"  style="border:none" type="button" id="dropSerial" data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown d-xxl-block d-none dropDownHover">
+        <button class="btn btn-outline-light dropdown-toggle dropdown-toggle-Hover"  style="border:none" type="button" id="dropSerial" data-bs-toggle="dropdown" aria-expanded="false">
           Սերիալներ
         </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
+        <ul class="dropdown-menu dropdown-menu-Hover dropdown-menu-dark">
           <li><a class="dropdown-item" href="#">Դրամա</a></li>
           <li><a class="dropdown-item" href="#">Կոմեդիա</a></li>
           <li><a class="dropdown-item" href="#">Ֆանտաստիկա</a></li>
@@ -65,11 +164,11 @@
 
 
             <!-- mult -->
-      <div class="dropdown" onclick="window.location.href = 'https://films.bz/cartoons/'">
-        <button class="btn btn-outline-light dropdown-toggle"  style="border:none" type="button" id="dropMult"  data-bs-toggle="dropdown" aria-expanded="false">
+      <div class="dropdown d-xxl-block d-none dropDownHover">
+        <button class="btn btn-outline-light dropdown-toggle dropdown-toggle-Hover"  style="border:none" type="button" id="dropMult"  data-bs-toggle="dropdown" aria-expanded="false">
           Մուլտֆիլմեր
         </button>
-        <ul class="dropdown-menu dropdown-menu-dark">
+        <ul class="dropdown-menu dropdown-menu-Hover dropdown-menu-dark ">
           <li><a class="dropdown-item" href="#">Դրամա</a></li>
           <li><a class="dropdown-item" href="#">Կոմեդիա</a></li>
           <li><a class="dropdown-item" href="#">Ֆանտաստիկա</a></li>
@@ -82,12 +181,12 @@
       
 
       <!--support-->
-       <div class="dropdown" ">
-        <button class="btn btn-outline-light dropdown-toggle"  style="border:none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+       <div class="dropdown d-xxl-block d-none dropDownHover" >
+        <button class="btn btn-outline-light dropdown-toggle dropdown-toggle-Hover"  style="border:none" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
           Հետադարձ կապ
         </button>
               
-            <ul class="dropdown-menu dropdown-menu-dark">
+            <ul class="dropdown-menu dropdown-menu-Hover dropdown-menu-dark">
               <li><button class="btn btn-outline-light" type="button" style="border: none;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                   <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
@@ -100,15 +199,17 @@
             </button>
 
             <button class="btn btn-outline-light" type="button" style="border: none;">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-meta" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M8.217 5.243C9.145 3.988 10.171 3 11.483 3 13.96 3 16 6.153 16.001 9.907c0 2.29-.986 3.725-2.757 3.725-1.543 0-2.395-.866-3.924-3.424l-.667-1.123-.118-.197a54.944 54.944 0 0 0-.53-.877l-1.178 2.08c-1.673 2.925-2.615 3.541-3.923 3.541C1.086 13.632 0 12.217 0 9.973 0 6.388 1.995 3 4.598 3c.319 0 .625.039.924.122.31.086.611.22.913.407.577.359 1.154.915 1.782 1.714Zm1.516 2.224c-.252-.41-.494-.787-.727-1.133L9 6.326c.845-1.305 1.543-1.954 2.372-1.954 1.723 0 3.102 2.537 3.102 5.653 0 1.188-.39 1.877-1.195 1.877-.773 0-1.142-.51-2.61-2.87l-.937-1.565ZM4.846 4.756c.725.1 1.385.634 2.34 2.001A212.13 212.13 0 0 0 5.551 9.3c-1.357 2.126-1.826 2.603-2.581 2.603-.777 0-1.24-.682-1.24-1.9 0-2.602 1.298-5.264 2.846-5.264.091 0 .181.006.27.018Z"/>
-                  </svg>
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+              </svg>
             </button>
 
               </li>
             </ul>
        </div>
-       <div>
+      
+       
+       <div class="d-xxl-block d-none">
               <button type="button" class="btn btn-outline-light" style="margin: 10px; border: none;">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-badge-4k" viewBox="0 0 16 16">
                   <path d="M4.807 5.001C4.021 6.298 3.203 7.6 2.5 8.917v.971h2.905V11h1.112V9.888h.733V8.93h-.733V5.001h-1.71zm-1.23 3.93v-.032a46.781 46.781 0 0 1 1.766-3.001h.062V8.93H3.577zm9.831-3.93h-1.306L9.835 7.687h-.057V5H8.59v6h1.187V9.075l.615-.699L12.072 11H13.5l-2.232-3.415 2.14-2.584z"/>
@@ -117,44 +218,90 @@
               </button>
        </div>       
       
-      
-        <!--language-->
-       <div class="btn-group">
-          <button type="button" class="btn btn-outline-light " data-bs-toggle="dropdown" aria-expanded="false" style="margin: 3px; border: none;">Հայերեն
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-globe2" viewBox="0 0 16 16" style="margin-bottom:5px; margin-left:5px">
-              <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm7.5-6.923c-.67.204-1.335.82-1.887 1.855-.143.268-.276.56-.395.872.705.157 1.472.257 2.282.287V1.077zM4.249 3.539c.142-.384.304-.744.481-1.078a6.7 6.7 0 0 1 .597-.933A7.01 7.01 0 0 0 3.051 3.05c.362.184.763.349 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9.124 9.124 0 0 1-1.565-.667A6.964 6.964 0 0 0 1.018 7.5h2.49zm1.4-2.741a12.344 12.344 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332zM8.5 5.09V7.5h2.99a12.342 12.342 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.612 13.612 0 0 1 7.5 10.91V8.5H4.51zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741H8.5zm-3.282 3.696c.12.312.252.604.395.872.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a6.696 6.696 0 0 1-.598-.933 8.853 8.853 0 0 1-.481-1.079 8.38 8.38 0 0 0-1.198.49 7.01 7.01 0 0 0 2.276 1.522zm-1.383-2.964A13.36 13.36 0 0 1 3.508 8.5h-2.49a6.963 6.963 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667zm6.728 2.964a7.009 7.009 0 0 0 2.275-1.521 8.376 8.376 0 0 0-1.197-.49 8.853 8.853 0 0 1-.481 1.078 6.688 6.688 0 0 1-.597.933zM8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855.143-.268.276-.56.395-.872A12.63 12.63 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.963 6.963 0 0 0 14.982 8.5h-2.49a13.36 13.36 0 0 1-.437 3.008zM14.982 7.5a6.963 6.963 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008h2.49zM11.27 2.461c.177.334.339.694.482 1.078a8.368 8.368 0 0 0 1.196-.49 7.01 7.01 0 0 0-2.275-1.52c.218.283.418.597.597.932zm-.488 1.343a7.765 7.765 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"/>
-            </svg>
-          </button>
-              
-          <ul class="dropdown-menu dropdown-menu-dark"  style="border: none;">
-            <li><a class="dropdown-item " href="#">Русский</a></li>
-          </ul>
-       </div>  
+    
+       <button type="button" class="btn btn-outline-light d-none d-sm-block" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Մուտք
+       </button>
+       
+       <button type="button" class="btn btn-outline-light d-none d-sm-block" style="border: none; margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+         Գրանցվել
+       </button>
 
       <!--search-->    
-       <form class="d-flex">
+       <form class="d-flex d-xxl-block d-none">
+        <div class="searchInput"> 
           <input class="form-control me-2z typeValue" type="search" placeholder="Որոնել" aria-label="Search" cursor: auto > 
-            <div>
               <button class="btn btn-outline-light"  style="border: none; " type="submit" id="stop">
                 <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="aqua" class="bi bi-search" viewBox="0 0 16 16">
                   <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
                   </svg>
             </button>
-          </div>
+        </div> 
        </form>
        
-            <button type="button" class="btn btn-outline-light" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
-             Մուտք
+       <!-- search2     -->
+       <form class="d-flex d-none d-lg-block d-xxl-none">
+        <div class="searchInput"> 
+          <input class="form-control me-2z typeValue" type="search" size="42px" placeholder="Որոնել" aria-label="Search" cursor: auto > 
+              <button class="btn btn-outline-light"  style="border: none; " type="submit" id="stop">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="aqua" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
             </button>
+        </div> 
+       </form>
+
+        <!-- search3-->
+       <form class="d-flex d-none d-sm-block d-lg-none">
+        <div class="searchInput"> 
+          <input class="form-control me-2z typeValue" size="14px" type="search" placeholder="Որոնել" aria-label="Search" cursor: auto > 
+              <button class="btn btn-outline-light"  style="border: none; " type="submit" id="stop">
+                <svg  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="aqua" class="bi bi-search" viewBox="0 0 16 16">
+                  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+                  </svg>
+            </button>
+        </div> 
+       </form>
+
+       <!--Search4-->
+     <button type="button" class="btn btn-outline-light d-block d-sm-none" data-bs-toggle="dropdown" aria-expanded="false" style="border: none;">
+      <svg  xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="aqua" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+        </svg>
+    </button>
+        
+    <ul class="dropdown-menu dropdown-menu-dark"  style="border: none;">
+      <input class="form-control me-2z typeValue" type="search" placeholder="Որոնել" aria-label="Search" cursor: auto > 
+    </ul>
+
+       <!--language-->
+     <div class="btn-group d-md-block d-none language" style="display: flex;">
+        <button type="button" class="btn btn-outline-light" data-bs-toggle="dropdown" id="langArm" aria-expanded="false" style="border: none; display: flex; align-items: center; ">Հայերեն
+          <img src="../index/image/Armenia.webp" alt="" width="30px" height="20px" style="margin: 5px;">
+        </button>
             
-            <button type="button" class="btn btn-outline-light" style="border: none; margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
-              Գրանցվել
-            </button>
+        <button class="dropdown-menu dropdown-menu-dark"  style="border: none;" id="menuLanguage">
+          <li class="dropdown-item"> Русский <img src="../index/image/Russia.png" width="30px" height="20px" style="margin: 5px;"></li>
+        </button>
+     </div>  
+
+      <!--modalMutq2-->
+      <div class="btn-group d-block d-sm-none">
+        <button type="button" class="btn btn-outline-light" style="border: none;" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Մուտք
+         </button>
+        <button type="button" class="btn btn-dark dropdown-toggle dropdown-toggle-split btn-outline-light" style="border: none;" data-bs-toggle="dropdown" aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton">
+          <button type="button" class="btn btn-outline-light" style="border: none; margin-right: 10px;" data-bs-toggle="modal" data-bs-target="#exampleModal2">
+            Գրանցվել
+          </button>
+        </ul>
+      </div>
+  
     </nav>
 
-
-
-<!-- Modal mutq -->
+      <!-- Modal mutq -->
        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
           <div class="modal-content">
@@ -162,16 +309,22 @@
               <h5 class="modal-title" id="exampleModalLabel">Մուտքի բաժին</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body dropdown-menu-dark">
-              
+            <div class="modal-body dropdown-menu-dark">              
 
                 <div class="mb-3">
                   <label for="exampleDropdownFormEmail2" class="form-label">Էլ․ հասցե</label>
                   <input type="email" class="form-control" id="email66" placeholder="">
                 </div>
-                <div class="mb-3">
+                <div class="mb-3" class="eye" >
                   <label for="exampleDropdownFormPassword2" class="form-label">Գաղտնաբառ </label>
-                  <input type="password" class="form-control" id="pass66" placeholder="">
+                  <div class="inputPass" >
+                    <input type="password" class="form-control" id="pass66" placeholder="" >    
+                    <svg class="eyePass" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-eye-fill" viewBox="0 0 16 16" onmousedown="eyeOn('pass66')" onmouseup="eyeOff('pass66')">
+                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                    </svg>
+                  </div>
+                  
                 </div>
                 <div class="mb-3">
                   <div class="form-check">
@@ -181,14 +334,12 @@
                     </label>
                   </div>
                 </div>
-                <button type="submit" id="login" class="btn btn-secondary">Մուտք</button>
-              
+                <button type="submit" id="login" class="btn btn-secondary">Մուտք</button>              
 
             </div>
           </div>
         </div>
        </div>
-
 
       <!-- Modal register -->
         <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -198,40 +349,37 @@
               <h5 class="modal-title" id="exampleModalLabel">Գրանցման բաժին</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body dropdown-menu-dark">
-              
-              <form>
-
-
-              <div>
-                <div class="mb-3" style="display:inline-block;">
+            <div class="modal-body dropdown-menu-dark">              
+             
+                <div class="mb-3" style="display:block;">
                   <label for="exampleDropdownFormEmail2" class="form-label">Էլ․ հասցե</label> 
-                  <input type="email" class="form-control" id="email" placeholder="" style="width:430px;">
+                  <input type="email" class="form-control" id="email" placeholder="" >
                 </div>
                 <div style="display:inline-block;" id="checkEmail"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-check2" viewBox="0 0 16 16">
                     <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                   </svg>
                 </div>
-              </div>
-              
-              
-              <div>
-                <div class="mb-3" style="display:inline-block;">
+             
+                <div class="mb-3" style="display:block;">
                   <label for="exampleDropdownFormPassword2" class="form-label passwords"> Գաղտնաբառ</label>
-                  <input type="password" class="form-control" id="passOne" placeholder="" style="width:430px;"> 
+                  <div class="inputPass">
+                    <input type="password" class="form-control" id="passOne" placeholder="" >    
+                    <svg class="eyePass" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="gray" class="bi bi-eye-fill" viewBox="0 0 16 16" onmousedown="eyeOn('passOne')" onmouseup="eyeOff('passOne')">
+                      <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                      <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                    </svg>
+                  </div>
                 </div>
                 <div style="display:inline-block;" id="checkPassOne">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-check2" viewBox="0 0 16 16">
                     <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
                   </svg>
                 </div>
-              </div>
-
                
               <div>
-                <div class="mb-3" id="pswRep" style="display:inline-block;" >
+                <div class="mb-3" id="pswRep" style="display:block;" >
                   <label for="exampleDropdownFormPassword2" class="form-label passwords">Կրկնել գաղտնաբառը</label>
-                  <input type="password" class="form-control" id="passTwo" placeholder="" style="width:430px;">
+                  <input type="password" class="form-control" id="passTwo" placeholder="" >
                 </div>
                 <div style="display:inline-block;" id="checkPassTwo">
                   <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="green" class="bi bi-check2-all" viewBox="0 0 16 16">
@@ -247,7 +395,6 @@
                   <input type="reset" value="Ջնջել" class="btn btn-secondary next-btn" id="delete">
                 </div>
               
-              </form>
             </div>
           </div>
         </div>
@@ -255,14 +402,15 @@
 
      <!--youtube link-->
         <div class="container">
-        <iframe width="560" height="315" style="position:fixed; bottom: 0; right: 0; " src="https://www.youtube.com/embed/avAXhnbs69w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="nkar"> </div>
+            <div class="container1">
+              <iframe class="m-1" width="400" height="200"  src="https://www.youtube.com/embed/avAXhnbs69w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="m-1" width="400" height="200" src="https://www.youtube.com/embed/QvFCLYEVt4I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="m-1" width="400" height="200" src="https://www.youtube.com/embed/UEi7OIw1kQU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <iframe class="m-1" width="400" height="200" src="https://www.youtube.com/embed/Z29ORu6_p34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
-    
-     
-        <div class="nkar"> </div>
-    
-        <div id="newDiv"></div>
-
+        
         <script src="index.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         
